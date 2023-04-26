@@ -20,7 +20,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $include_menu = '';
     public string $mensaje_html = '';
 
-    public array $secciones = array();
+    public array $secciones = array("not_emisor", "not_receptor", "not_mensaje", "not_rel_mensaje", "not_rel_mensaje_etapa",
+        "not_mensaje_etapa", "not_adjunto");
     public array $links_catalogos = array();
 
     public stdClass $links;
@@ -36,10 +37,26 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
             die('Error');
         }
 
-        /*$this->links_catalogos["nom_nomina"]["titulo"] = "Nominas";
-        $this->links_catalogos["nom_nomina"]["subtitulo"] = "Catálogo";*/
+        $this->links_catalogos["not_emisor"]["titulo"] = "Emisores";
+        $this->links_catalogos["not_emisor"]["subtitulo"] = "Catálogo";
 
+        $this->links_catalogos["not_receptor"]["titulo"] = "Receptores";
+        $this->links_catalogos["not_receptor"]["subtitulo"] = "Catálogo";
 
+        $this->links_catalogos["not_mensaje"]["titulo"] = "Mensajes";
+        $this->links_catalogos["not_mensaje"]["subtitulo"] = "Catálogo";
+
+        $this->links_catalogos["not_rel_mensaje"]["titulo"] = "Rel. Mensaje";
+        $this->links_catalogos["not_rel_mensaje"]["subtitulo"] = "Catálogo";
+
+        $this->links_catalogos["not_rel_mensaje_etapa"]["titulo"] = "Etapa Rel. Mensaje";
+        $this->links_catalogos["not_rel_mensaje_etapa"]["subtitulo"] = "Catálogo";
+
+        $this->links_catalogos["not_mensaje_etapa"]["titulo"] = "Etapa Mensaje";
+        $this->links_catalogos["not_mensaje_etapa"]["subtitulo"] = "Catálogo";
+
+        $this->links_catalogos["not_adjunto"]["titulo"] = "Adjuntos";
+        $this->links_catalogos["not_adjunto"]["subtitulo"] = "Catálogo";
     }
 
 
