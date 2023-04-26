@@ -6,7 +6,7 @@ use PDO;
 use stdClass;
 use tglobally\template_tg\html;
 
-class controlador_not_emisor extends \gamboamartin\notificaciones\controllers\controlador_not_emisor {
+class controlador_not_receptor extends \gamboamartin\notificaciones\controllers\controlador_not_receptor {
 
     public array $sidebar;
 
@@ -36,16 +36,16 @@ class controlador_not_emisor extends \gamboamartin\notificaciones\controllers\co
         $menu_items->alta['menu_lateral_active'] = true;
         $menu_items->modifica['menu_lateral_active'] = true;
 
-        $this->sidebar['lista']['titulo'] = "Emisores";
+        $this->sidebar['lista']['titulo'] = "Receptores";
         $this->sidebar['lista']['menu'] = array($menu_items->alta);
 
         $menu_items->alta['menu_seccion_active'] = false;
 
-        $this->sidebar['alta']['titulo'] = "Emisores";
+        $this->sidebar['alta']['titulo'] = "Receptores";
         $this->sidebar['alta']['stepper_active'] = true;
         $this->sidebar['alta']['menu'] = array($menu_items->alta);
 
-        $this->sidebar['modifica']['titulo'] = "Anticipos";
+        $this->sidebar['modifica']['titulo'] = "Receptores";
         $this->sidebar['modifica']['stepper_active'] = true;
         $this->sidebar['modifica']['menu'] = array($menu_items->modifica);
 
