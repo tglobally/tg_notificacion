@@ -55,6 +55,7 @@
     "gamboa.martin/services": "^7.0.0",
     "gamboa.martin/proceso": "^7.0.0",
     "gamboa.martin/acl": "^8.0.0",
+    "gamboa.martin/notificaciones": "^1.0.0",
     "tglobally/template_tg": "^4.0.0"
   },
   "require-dev": {
